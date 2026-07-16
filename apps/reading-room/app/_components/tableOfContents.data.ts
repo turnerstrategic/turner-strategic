@@ -1,0 +1,16 @@
+export const tableOfContentsSections = [
+  { id: "executive-summary", title: "Executive Summary" },
+  { id: "institution-scorecard", title: "Institution Scorecard" },
+  { id: "executive-directors-note", title: "Executive Director's Note" },
+  { id: "political-general-news", title: "Political & General News" },
+  { id: "market-overview", title: "Market Overview" },
+  { id: "government-affairs", title: "Government Affairs" },
+  { id: "executive-branch-watch", title: "Executive Branch Watch" },
+  { id: "economic-intelligence", title: "Economic Intelligence" },
+  { id: "corporate-intelligence", title: "Corporate Intelligence" },
+  { id: "historical-perspective", title: "Historical Perspective" },
+  { id: "committee-proceedings", title: "Committee Proceedings" },
+  { id: "capital-allocation", title: "Capital Allocation" },
+  { id: "watch-list", title: "Watch List" },
+  { id: "appendix", title: "Appendix" },
+] as const;
