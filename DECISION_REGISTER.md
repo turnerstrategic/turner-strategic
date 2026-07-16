@@ -7,6 +7,48 @@ superseding entry links back to the one it replaces.
 
 ---
 
+## 2026-07-15 — `ThemeProvider` lives in `packages/ui`, not `packages/design-system`
+
+**Decision**: The React context provider that exposes design tokens at runtime
+(`ThemeProvider` / `useTheme`) is defined in `packages/ui/src/ThemeProvider.tsx`,
+not in `packages/design-system`.
+
+**Why**: `packages/design-system` has no React dependency by design (see the
+"Internal packages consumed as source" entry below — it's meant to be
+framework-agnostic tokens consumable by anything, not just React). Adding
+`createContext`/`useContext` there would force a React dependency onto a package
+that other tooling (e.g. a future non-React surface) might want to consume without
+pulling in React. `packages/ui` already depends on `design-system` and already has
+`react` as a peer dependency, so it's the natural home for the React-specific
+consumption layer.
+
+**Revisit when**: never, structurally — this boundary should hold as long as
+`design-system` stays framework-agnostic.
+
+---
+
+## 2026-07-15 — Removed the guessed "Inter" / "Source Serif 4" font names
+
+**Decision**: `packages/design-system/src/tokens.css` (`--font-sans`, `--font-serif`)
+and `packages/design-system/src/index.ts` (`fonts.sans`, `fonts.serif`) no longer
+name specific typefaces — they now fall back to generic system font stacks only
+(`ui-sans-serif, system-ui, sans-serif` / `ui-serif, Georgia, serif`).
+
+**Why**: These were guessed placeholder font names left over from the initial
+scaffold, predating the explicit "do not select final fonts yet" instruction that
+has now been given twice (once for `packages/design-system/tokens/typography.ts` in
+TS-FEAT-002 Part 1, again for the semantic type scale in Part 2). Leaving "Inter"
+and "Source Serif 4" sitting in the Tailwind theme while the new token files
+correctly used `"TBD"` was an inconsistency worth fixing while this exact area was
+already being edited for the type-scale work, rather than carrying it forward
+silently.
+
+**Action required**: when a typeface is actually selected, update both files
+together — they're intentionally parallel (one is the Tailwind theme source, the
+other is the framework-agnostic TS mirror of the same values).
+
+---
+
 ## 2026-07-15 — Generated-file ESLint ignores must be duplicated at the root config
 
 **Decision**: `**/next-env.d.ts` is ignored in both the root `eslint.config.js` and

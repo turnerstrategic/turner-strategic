@@ -1,2 +1,9 @@
 @import "tailwindcss";
 @import "@turner-strategic/design-system/tokens.css";
+
+@layer base {
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-institutional-black);
+  }
+}

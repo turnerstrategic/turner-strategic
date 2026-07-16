@@ -18,6 +18,27 @@
   --color-brand-600: oklch(0.48 0.16 250);
   --color-brand-900: oklch(0.22 0.08 250);
 
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Source Serif 4", ui-serif, Georgia, serif;
+  /* Institutional palette — sourced from packages/design-system/tokens/colors.ts. */
+  --color-institutional-gold: #8b7a3e;
+  --color-institutional-black: #111111;
+  --color-ivory: #f8f6f1;
+  --color-charcoal: #3c3c3c;
+
+  /* Semantic type scale (placeholders) — sourced from tokens/typography.ts's typeScale. */
+  --text-display: 3.5rem;
+  --text-display--line-height: 1.2;
+  --text-heading1: 2.5rem;
+  --text-heading1--line-height: 1.2;
+  --text-heading2: 2rem;
+  --text-heading2--line-height: 1.2;
+  --text-heading3: 1.5rem;
+  --text-heading3--line-height: 1.5;
+  --text-body: 1rem;
+  --text-body--line-height: 1.5;
+  --text-caption: 0.875rem;
+  --text-caption--line-height: 1.5;
+
+  /* No typeface has been selected yet — these are functional fallback stacks only. */
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-serif: ui-serif, Georgia, serif;
 }

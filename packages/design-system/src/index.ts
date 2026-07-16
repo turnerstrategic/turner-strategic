@@ -7,6 +7,6 @@ export const brand = {
 } as const;
 
 export const fonts = {
-  sans: '"Inter", ui-sans-serif, system-ui, sans-serif',
-  serif: '"Source Serif 4", ui-serif, Georgia, serif',
+  sans: "ui-sans-serif, system-ui, sans-serif",
+  serif: "ui-serif, Georgia, serif",
 } as const;
