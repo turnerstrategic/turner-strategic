@@ -1,0 +1,43 @@
+{
+  "name": "turner-strategic",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Turner Strategic monorepo — institutional software development.",
+  "engines": {
+    "node": ">=20.9.0",
+    "pnpm": ">=9.0.0"
+  },
+  "packageManager": "pnpm@11.13.0",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint -- --fix",
+    "typecheck": "turbo run typecheck",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^20.19.43",
+    "eslint": "^9.39.5",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.2",
+    "prettier": "^3.9.5",
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "turbo": "^2.10.5",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.64.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix"
+    ],
+    "*.{ts,tsx,js,jsx,json,md,mdx,css,yml,yaml}": [
+      "prettier --write"
+    ]
+  }
+}

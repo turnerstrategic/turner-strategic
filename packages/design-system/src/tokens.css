@@ -1,0 +1,23 @@
+/*
+ * Shared Tailwind v4 theme tokens for Turner Strategic products.
+ * Imported by each app's global stylesheet via:
+ *   @import "@turner-strategic/design-system/tokens.css";
+ *
+ * Tailwind v4's automatic content detection is scoped to the consuming app's own
+ * directory tree and does not reach sibling workspace packages. Since this file is
+ * imported by every app, it's the single place to register `@source` for shared
+ * packages that ship Tailwind class names — so a new app gets correct utility
+ * generation for `@turner-strategic/ui` without repeating this directive.
+ */
+@source "../../ui/src";
+
+@theme {
+  --color-brand-50: oklch(0.98 0.01 250);
+  --color-brand-100: oklch(0.95 0.03 250);
+  --color-brand-500: oklch(0.55 0.16 250);
+  --color-brand-600: oklch(0.48 0.16 250);
+  --color-brand-900: oklch(0.22 0.08 250);
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Source Serif 4", ui-serif, Georgia, serif;
+}

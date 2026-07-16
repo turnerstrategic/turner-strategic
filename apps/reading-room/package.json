@@ -1,0 +1,32 @@
+{
+  "name": "@turner-strategic/reading-room",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Turner Strategic reading room — public-facing Next.js application.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf .next .turbo"
+  },
+  "dependencies": {
+    "@turner-strategic/common": "workspace:*",
+    "@turner-strategic/design-system": "workspace:*",
+    "@turner-strategic/ui": "workspace:*",
+    "next": "^15.5.20",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.6",
+    "@tailwindcss/postcss": "^4.3.2",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^15.5.20",
+    "tailwindcss": "^4.3.2"
+  }
+}
