@@ -25,7 +25,7 @@
   --color-charcoal: #3c3c3c;
 
   /* Semantic type scale (placeholders) — sourced from tokens/typography.ts's typeScale. */
-  --text-display: 3.5rem;
+  --text-display: 2.8rem;
   --text-display--line-height: 1.2;
   --text-heading1: 2.5rem;
   --text-heading1--line-height: 1.2;

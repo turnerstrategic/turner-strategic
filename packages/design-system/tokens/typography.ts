@@ -28,7 +28,7 @@ export const lineHeight = {
 } as const;
 
 export const typeScale = {
-  display: { fontSize: "3.5rem", fontWeight: fontWeight.bold, lineHeight: lineHeight.tight },
+  display: { fontSize: "2.8rem", fontWeight: fontWeight.bold, lineHeight: lineHeight.tight },
   heading1: { fontSize: "2.5rem", fontWeight: fontWeight.bold, lineHeight: lineHeight.tight },
   heading2: {
     fontSize: fontSize.xxxl,
